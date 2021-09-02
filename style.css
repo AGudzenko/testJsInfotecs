@@ -1,0 +1,64 @@
+#myTable {
+    width: 50%;
+    white-space: nowrap; 
+    table-layout: fixed;
+}
+td{
+    font: 10px arial;
+    
+    text-overflow: ellipsis;
+    height: 30px;
+    overflow: hidden;
+
+}
+.table_sort table {
+    border-collapse: collapse;
+}
+
+.table_sort th {
+    cursor: pointer;
+}
+
+.table_sort td,
+.table_sort th {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #846868;
+}
+
+.table_sort tbody tr:nth-child(even) {
+    background: #e3e3e3;
+}
+
+th.sorted[data-order="1"],
+th.sorted[data-order="-1"] {
+    position: relative;
+}
+
+th.sorted[data-order="1"]::after,
+th.sorted[data-order="-1"]::after {
+    right: 8px;
+    position: absolute;
+}
+
+th.sorted[data-order="-1"]::after {
+	content: "▼"
+}
+
+th.sorted[data-order="1"]::after {
+	content: "▲"
+}
+
+#myForm{
+    width: 30%;
+    background-color: antiquewhite;
+    float: right;
+    
+}
+#divTable{
+    width: 50%;
+}
+div{
+    display: inline-flex;
+}
